@@ -1,0 +1,135 @@
+###
+GET http://locaLhost:8000
+
+//seven areas of focus crud
+###
+GET http://locaLhost:8000/allareas
+###
+GET http://locaLhost:8000/area/1
+###
+POST http://locaLhost:8000/addarea
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updatearea/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deletearea/1
+
+
+//projects crud
+###
+GET http://locaLhost:8000/allprojects
+###
+GET http://locaLhost:8000/project/1
+###
+POST http://locaLhost:8000/addproject
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updateproject/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deleteproject/1
+
+
+//presidents crud
+###
+GET http://locaLhost:8000/allpresidents
+###
+GET http://locaLhost:8000/president/1
+###
+POST http://locaLhost:8000/addpresident
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updatepresident/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deletepresident/1
+
+
+//members crud
+###
+GET http://locaLhost:8000/allmembers
+###
+GET http://locaLhost:8000/member/1
+###
+POST http://locaLhost:8000/addmember
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updatemember/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deletemember/1
+
+//home pics crud
+###
+GET http://locaLhost:8000/allhomepic
+###
+GET http://locaLhost:8000/homepic/1
+###
+POST http://locaLhost:8000/addhomepic
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updatehomepic/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deletehomepic/1
+
+//gallery crud
+###
+GET http://locaLhost:8000/allgalley
+###
+GET http://locaLhost:8000/gallery/1
+###
+POST http://locaLhost:8000/addgallery
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updategallery/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deletegallery/1
+
+
+//events crud
+###
+GET http://locaLhost:8000/allevents
+###
+GET http://locaLhost:8000/event/1
+###
+POST http://locaLhost:8000/addevent
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updateevent/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deleteevent/1
+
+
+//blogs crud
+###
+GET http://locaLhost:8000/allblogs
+###
+GET http://locaLhost:8000/blog/1
+###
+POST http://locaLhost:8000/addblog
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updateblog/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deleteblog/1
