@@ -11,33 +11,42 @@ importers:
       '@hono/node-server':
         specifier: ^1.12.0
         version: 1.12.0
+      '@hono/zod-validator':
+        specifier: ^0.2.2
+        version: 0.2.2(hono@4.5.3)(zod@3.23.8)
       '@neondatabase/serverless':
         specifier: ^0.9.4
         version: 0.9.4
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
       drizzle-kit:
-        specifier: ^0.23.1
-        version: 0.23.1
+        specifier: ^0.22.8
+        version: 0.22.8
       drizzle-orm:
-        specifier: ^0.32.1
-        version: 0.32.1(@neondatabase/serverless@0.9.4)(@types/pg@8.11.6)
+        specifier: ^0.31.2
+        version: 0.31.4(@neondatabase/serverless@0.9.4)(@types/pg@8.11.6)
       hono:
-        specifier: ^4.5.3
+        specifier: ^4.4.11
         version: 4.5.3
       zod:
         specifier: ^3.23.8
         version: 3.23.8
+      zod-validator:
+        specifier: ^1.0.1
+        version: 1.0.1
     devDependencies:
       '@types/node':
         specifier: ^20.14.13
         version: 20.14.13
       tsx:
-        specifier: ^4.7.1
+        specifier: ^4.16.2
         version: 4.16.2
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
 
 packages:
-
-  '@drizzle-team/brocli@0.8.2':
-    resolution: {integrity: sha512-zTrFENsqGvOkBOuHDC1pXCkDXNd2UhP4lI3gYGhQ1R1SPeAAfqzPsV1dcpMy4uNU6kB5VpU5NGhvwxVNETR02A==}
 
   '@esbuild-kit/core-utils@3.3.2':
     resolution: {integrity: sha512-sPRAnw9CdSsRmEtnsl2WXWdyquogVpB3yZ3dgwJfe8zrOzTsV7cJvmwrKVa+0ma5BoiGJ+BoqkMvawbayKUsqQ==}
@@ -457,6 +466,12 @@ packages:
     resolution: {integrity: sha512-e6oHjNiErRxsZRZBmc2KucuvY3btlO/XPncIpP2X75bRdTilF9GLjm3NHvKKunpJbbJJj31/FoPTksTf8djAVw==}
     engines: {node: '>=18.14.1'}
 
+  '@hono/zod-validator@0.2.2':
+    resolution: {integrity: sha512-dSDxaPV70Py8wuIU2QNpoVEIOSzSXZ/6/B/h4xA7eOMz7+AarKTSGV8E6QwrdcCbBLkpqfJ4Q2TmBO0eP1tCBQ==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.19.1
+
   '@neondatabase/serverless@0.9.4':
     resolution: {integrity: sha512-D0AXgJh6xkf+XTlsO7iwE2Q1w8981E1cLCPAALMU2YKtkF/1SF6BiAzYARZFYo175ON+b1RNIy9TdSFHm5nteg==}
 
@@ -478,12 +493,16 @@ packages:
       supports-color:
         optional: true
 
-  drizzle-kit@0.23.1:
-    resolution: {integrity: sha512-posGQhj8/K4S4CPhk7BO9+IcpNdIh96t0DvcAr/NvMKhPhe5D0MELzmpq9R2MpmSP3fd+Z3upwidtetrw7xnjg==}
+  dotenv@16.4.5:
+    resolution: {integrity: sha512-ZmdL2rui+eB2YwhsWzjInR8LldtZHGDoQ1ugH85ppHKwpUHL7j7rN0Ti9NCnGiQbhaZ11FpR+7ao1dNsmduNUg==}
+    engines: {node: '>=12'}
+
+  drizzle-kit@0.22.8:
+    resolution: {integrity: sha512-VjI4wsJjk3hSqHSa3TwBf+uvH6M6pRHyxyoVbt935GUzP9tUR/BRZ+MhEJNgryqbzN2Za1KP0eJMTgKEPsalYQ==}
     hasBin: true
 
-  drizzle-orm@0.32.1:
-    resolution: {integrity: sha512-Wq1J+lL8PzwR5K3a1FfoWsbs8powjr3pGA4+5+2ueN1VTLDNFYEolUyUWFtqy8DVRvYbL2n7sXZkgVmK9dQkng==}
+  drizzle-orm@0.31.4:
+    resolution: {integrity: sha512-VGD9SH9aStF2z4QOTnVlVX/WghV/EnuEzTmsH3fSVp2E4fFgc8jl3viQrS/XUJx1ekW4rVVLJMH42SfGQdjX3Q==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
       '@cloudflare/workers-types': '>=3'
@@ -658,15 +677,21 @@ packages:
     engines: {node: '>=18.0.0'}
     hasBin: true
 
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+
+  zod-validator@1.0.1:
+    resolution: {integrity: sha512-LX2euDhUnwpyqFfTaqKUKDOYQpb1XVwxQQMXiLCnBvQDUggrdHgnTn8J2FywvnF/N17X++A7GEaEERW0vT6NxA==}
 
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
 snapshots:
-
-  '@drizzle-team/brocli@0.8.2': {}
 
   '@esbuild-kit/core-utils@3.3.2':
     dependencies:
@@ -884,6 +909,11 @@ snapshots:
 
   '@hono/node-server@1.12.0': {}
 
+  '@hono/zod-validator@0.2.2(hono@4.5.3)(zod@3.23.8)':
+    dependencies:
+      hono: 4.5.3
+      zod: 3.23.8
+
   '@neondatabase/serverless@0.9.4':
     dependencies:
       '@types/pg': 8.11.6
@@ -904,16 +934,17 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
-  drizzle-kit@0.23.1:
+  dotenv@16.4.5: {}
+
+  drizzle-kit@0.22.8:
     dependencies:
-      '@drizzle-team/brocli': 0.8.2
       '@esbuild-kit/esm-loader': 2.6.5
       esbuild: 0.19.12
       esbuild-register: 3.6.0(esbuild@0.19.12)
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.32.1(@neondatabase/serverless@0.9.4)(@types/pg@8.11.6):
+  drizzle-orm@0.31.4(@neondatabase/serverless@0.9.4)(@types/pg@8.11.6):
     optionalDependencies:
       '@neondatabase/serverless': 0.9.4
       '@types/pg': 8.11.6
@@ -1059,6 +1090,12 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
+  typescript@5.5.4: {}
+
   undici-types@5.26.5: {}
+
+  zod-validator@1.0.1:
+    dependencies:
+      zod: 3.23.8
 
   zod@3.23.8: {}
