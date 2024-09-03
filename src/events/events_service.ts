@@ -9,7 +9,9 @@ export const eventservice = async (limit?: number)=>{
             limit: limit,
         });
      }
-     return await db.query.Events_table.findMany()
+     return await db.query.Events_table.findMany({
+      orderBy: Events_table.id
+     })
 }
 export const geteventservice =async(id: number)=>{
     return await db.query.Events_table.findFirst({

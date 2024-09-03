@@ -8,7 +8,9 @@ export const galleryservice = async (limit?: number)=>{
             limit: limit,
         });
      }
-     return await db.query.gallery_table.findMany()
+     return await db.query.gallery_table.findMany({
+      orderBy: gallery_table.id
+     })
 }
 export const getgalleryservice =async(id: number)=>{
     return await db.query.gallery_table.findFirst({

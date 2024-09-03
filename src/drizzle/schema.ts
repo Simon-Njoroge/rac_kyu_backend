@@ -19,6 +19,7 @@ export const seven_areas_table = pgTable("seven_areas_table", {
 export const Events_table = pgTable("Events_table", {
     id: serial("id").primaryKey(),
     poster:varchar("poster"),
+    description: varchar("description")
 });
 
 export const Members_table = pgTable("Members_table", {
@@ -45,7 +46,9 @@ export const projects_table = pgTable("projects_table", {
 
 export const gallery_table = pgTable("gallery_table", {
     id: serial("id").primaryKey(),
-    image: varchar("image")
+    image: varchar("image"),
+    link: varchar("link"),
+    description: varchar("description")
 });
 
 
