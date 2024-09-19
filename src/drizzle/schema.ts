@@ -1,5 +1,5 @@
 
-import { pgTable, varchar, serial} from 'drizzle-orm/pg-core';
+import { pgTable, varchar, serial, pgEnum, integer} from 'drizzle-orm/pg-core';
 import { relations, sql } from 'drizzle-orm';
 import { title } from 'process';
 
@@ -59,6 +59,13 @@ export const blogs_table = pgTable("blogs_table", {
     image: varchar("image")
 });
 
+export const roleEnum =pgEnum("role",["admin"])
+export const Admin=pgTable("Admin",{
+    id:serial("id").primaryKey(),
+    email:varchar("username",{length:100}),
+    password:varchar("password",{length:100}),
+    role: roleEnum("role").default("admin")
+})
 
 export type TIhomepics=typeof Home_pictures_table.$inferInsert
 export type TShomepics=typeof Home_pictures_table.$inferSelect
