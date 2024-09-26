@@ -10,6 +10,7 @@ import { galleryrouters } from './gallery/gallery_router'
 import { eventrouters } from './events/events_router'
 import { blogsrouters } from './blogs/blogs_router'
 import { adminrouter } from './admin/adminrouter'
+import { downloadrouters } from './downloads/downloads_router'
 const app = new Hono()
 
 app.get('/', (c) => {
@@ -25,6 +26,7 @@ app.route("/",galleryrouters)
 app.route("/",eventrouters)
 app.route("/",blogsrouters)
 app.route("/",adminrouter)
+app.route("/",downloadrouters)
 const port = 8000
 console.log(`Server is running on port ${port}`)
 

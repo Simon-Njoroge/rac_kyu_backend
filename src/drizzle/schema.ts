@@ -54,9 +54,16 @@ export const gallery_table = pgTable("gallery_table", {
 
 export const blogs_table = pgTable("blogs_table", {
     id: serial("id").primaryKey(),
-    title: varchar("image"),
+    title: varchar("title"),
     descrition: varchar("descrition"),
     image: varchar("image")
+});
+
+export const download_table = pgTable("downloads", {
+    id: serial("id").primaryKey(),
+    title: varchar("title"),
+    descrition: varchar("descrition"),
+    Link: varchar("link")
 });
 
 export const roleEnum =pgEnum("role",["admin"])
@@ -90,3 +97,6 @@ export type TSgallery=typeof gallery_table.$inferSelect
 
 export type TIblogs=typeof blogs_table.$inferInsert
 export type TSblogs=typeof blogs_table.$inferSelect
+
+export type TIdownloads=typeof Home_pictures_table.$inferInsert
+export type TSdownloads=typeof Home_pictures_table.$inferSelect

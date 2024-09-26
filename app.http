@@ -135,6 +135,21 @@ Content-Type: application/json
 DELETE  http://locaLhost:8000/deleteblog/1
 
 ###
+GET http://locaLhost:8000/alldownloads
+###
+GET http://locaLhost:8000/download/1
+###
+POST http://locaLhost:8000/adddownload
+Content-Type: application/json
+
+###
+put http://locaLhost:8000/updatedownload/1
+Content-Type: application/json
+
+###
+DELETE  http://locaLhost:8000/deletedownload/1
+
+###
 POST  http://localhost:8000/register
 Content-Type: application/json
 
