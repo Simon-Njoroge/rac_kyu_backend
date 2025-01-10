@@ -4,11 +4,11 @@ GET http://locaLhost:8000
 //seven areas of focus crud
 ###
 GET http://locaLhost:8000/allareas
-###
-GET http://locaLhost:8000/area/1
-###
-POST http://locaLhost:8000/addarea
-Content-Type: application/json
+# ###
+# GET http://locaLhost:8000/area/1
+# ###
+# POST http://locaLhost:8000/addarea
+# Content-Type: application/json
 
 ###
 put http://locaLhost:8000/updatearea/1
